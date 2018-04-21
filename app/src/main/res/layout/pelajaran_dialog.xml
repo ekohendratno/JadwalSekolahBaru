@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="id.kopas.berkarya.jadwalsekolah.Activityku">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <TextView
+                android:id="@+id/dialog_jadwal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:fontFamily="sans-serif-medium"
+                android:lineSpacingExtra="8sp"
+                android:text="Jadwal Pelajaran"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/lbl_new_note_title"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/jadwal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="top"
+                android:hint="Mata Pelajaran"
+                android:inputType="textCapSentences|text"
+                android:lines="1"
+                android:textColorHint="@color/hint_enter_note"
+                android:textSize="@dimen/input_new_note" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/dialog_ruang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_10"
+                        android:fontFamily="sans-serif-medium"
+                        android:lineSpacingExtra="8sp"
+                        android:text="Ruang"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/lbl_new_note_title"
+                        android:textStyle="normal" />
+
+                    <EditText
+                        android:id="@+id/ruang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="top"
+                        android:hint="Ruangan"
+                        android:inputType="textCapSentences|text"
+                        android:lines="1"
+                        android:textColorHint="@color/hint_enter_note"
+                        android:textSize="@dimen/input_new_note" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/dialog_hari"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_10"
+                        android:fontFamily="sans-serif-medium"
+                        android:lineSpacingExtra="8sp"
+                        android:text="Hari"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/lbl_new_note_title"
+                        android:textStyle="normal" />
+
+                    <EditText
+                        android:id="@+id/hari"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="top"
+                        android:hint="Hari"
+                        android:inputType="textCapSentences|text"
+                        android:lines="1"
+                        android:textColorHint="@color/hint_enter_note"
+                        android:textSize="@dimen/input_new_note" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/dialog_mulai"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_10"
+                        android:fontFamily="sans-serif-medium"
+                        android:lineSpacingExtra="8sp"
+                        android:text="Jam Mulai"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/lbl_new_note_title"
+                        android:textStyle="normal" />
+
+                    <EditText
+                        android:id="@+id/mulai"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="top"
+                        android:hint="Jam Mulai"
+                        android:inputType="textCapSentences|text"
+                        android:lines="1"
+                        android:textColorHint="@color/hint_enter_note"
+                        android:textSize="@dimen/input_new_note" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/dialog_selesai"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_10"
+                        android:fontFamily="sans-serif-medium"
+                        android:lineSpacingExtra="8sp"
+                        android:text="Jam Selesai"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/lbl_new_note_title"
+                        android:textStyle="normal" />
+
+                    <EditText
+                        android:id="@+id/selesai"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="top"
+                        android:hint="Jam Selesai"
+                        android:inputType="textCapSentences|text"
+                        android:lines="1"
+                        android:textColorHint="@color/hint_enter_note"
+                        android:textSize="@dimen/input_new_note" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
