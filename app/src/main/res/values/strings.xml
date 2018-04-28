@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">Jadwal Sekolah</string>
+    <string name="app_name">Jadwal Sekolah 3</string>
     <string name="no_data_available">Tidak ada data untuk ditampilkan</string>
 
+    <string name="lbl_new_jadwal_title">Pelajaran Baru</string>
+    <string name="lbl_edit_jadwal_title">Ubah Pelajaran</string>
 </resources>

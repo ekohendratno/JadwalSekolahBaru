@@ -5,12 +5,13 @@
     android:layout_height="match_parent"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    tools:context="id.kopas.berkarya.jadwalsekolah.Activityku">
+    tools:context="id.kopas.berkarya.jadwalsekolah.Activity">
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/recyclerView"/>
+
     <TextView
         android:id="@+id/empty_view"
         android:layout_width="match_parent"
@@ -18,5 +19,4 @@
         android:gravity="center"
         android:visibility="gone"
         android:text="@string/no_data_available" />
-
 </RelativeLayout>

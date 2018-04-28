@@ -97,30 +97,37 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return jadwal;
     }
 
-    public List<Jadwal> getAllPelajaran() {
+    public List<Jadwal> getAllPelajaran(String hari) {
+        String hariQuery = "";
         List<Jadwal> jadwals = new ArrayList<>();
 
+        if (hari != null)
+            hariQuery = " WHERE " + Jadwal.COLUMN_HARI + "='" + hari + "'";
+
+
         // Select All Query
-        String selectQuery = "SELECT  * FROM " + Jadwal.TABLE_NAME + " ORDER BY " +
+        String selectQuery = "SELECT  * FROM " + Jadwal.TABLE_NAME + hariQuery + " ORDER BY " +
                 Jadwal.COLUMN_TIMESTAMP + " DESC";
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
 
+        jadwals.clear();
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
-                Jadwal jadwal = new Jadwal();
-                jadwal.setId(cursor.getInt(cursor.getColumnIndex(Jadwal.COLUMN_ID)));
-                jadwal.setHari(cursor.getString(cursor.getColumnIndex(Jadwal.COLUMN_HARI)));
-                jadwal.setJadwal(cursor.getString(cursor.getColumnIndex(Jadwal.COLUMN_JADWAL)));
-                jadwal.setRuang(cursor.getString(cursor.getColumnIndex(Jadwal.COLUMN_RUANG)));
-                jadwal.setMulai(cursor.getString(cursor.getColumnIndex(Jadwal.COLUMN_MULAI)));
-                jadwal.setSelesai(cursor.getString(cursor.getColumnIndex(Jadwal.COLUMN_SELESAI)));
-                jadwal.setPengingat(cursor.getString(cursor.getColumnIndex(Jadwal.COLUMN_PENGINGAT)));
-                jadwal.setTimestamp(cursor.getString(cursor.getColumnIndex(Jadwal.COLUMN_TIMESTAMP)));
 
-                jadwals.add(jadwal);
+                jadwals.add(new Jadwal(
+                        cursor.getInt(cursor.getColumnIndex(Jadwal.COLUMN_ID)),
+                        cursor.getString(cursor.getColumnIndex(Jadwal.COLUMN_HARI)),
+                        cursor.getString(cursor.getColumnIndex(Jadwal.COLUMN_JADWAL)),
+                        cursor.getString(cursor.getColumnIndex(Jadwal.COLUMN_RUANG)),
+                        cursor.getString(cursor.getColumnIndex(Jadwal.COLUMN_MULAI)),
+                        cursor.getString(cursor.getColumnIndex(Jadwal.COLUMN_SELESAI)),
+                        cursor.getString(cursor.getColumnIndex(Jadwal.COLUMN_PENGINGAT)),
+                        cursor.getString(cursor.getColumnIndex(Jadwal.COLUMN_TIMESTAMP))
+                ));
+
             } while (cursor.moveToNext());
         }
 

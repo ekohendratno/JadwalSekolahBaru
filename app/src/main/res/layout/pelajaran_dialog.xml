@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="id.kopas.berkarya.jadwalsekolah.Activityku">
+    tools:context="id.kopas.berkarya.jadwalsekolah.Activity">
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,7 +16,6 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-
             <TextView
                 android:id="@+id/dialog_jadwal"
                 android:layout_width="wrap_content"
@@ -23,22 +23,21 @@
                 android:layout_marginBottom="@dimen/dimen_10"
                 android:fontFamily="sans-serif-medium"
                 android:lineSpacingExtra="8sp"
-                android:text="Jadwal Pelajaran"
+                android:text="Pelajaran"
                 android:textColor="@color/colorAccent"
-                android:textSize="@dimen/lbl_new_note_title"
-                android:textStyle="normal" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
             <EditText
                 android:id="@+id/jadwal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_10"
                 android:background="@android:color/transparent"
                 android:gravity="top"
                 android:hint="Mata Pelajaran"
                 android:inputType="textCapSentences|text"
                 android:lines="1"
-                android:textColorHint="@color/hint_enter_note"
-                android:textSize="@dimen/input_new_note" />
+                android:textColorHint="@color/hint_enter_note" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -48,6 +47,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dimen_10"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
@@ -59,9 +59,7 @@
                         android:fontFamily="sans-serif-medium"
                         android:lineSpacingExtra="8sp"
                         android:text="Ruang"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="@dimen/lbl_new_note_title"
-                        android:textStyle="normal" />
+                        android:textColor="@color/colorAccent" />
 
                     <EditText
                         android:id="@+id/ruang"
@@ -72,13 +70,13 @@
                         android:hint="Ruangan"
                         android:inputType="textCapSentences|text"
                         android:lines="1"
-                        android:textColorHint="@color/hint_enter_note"
-                        android:textSize="@dimen/input_new_note" />
+                        android:textColorHint="@color/hint_enter_note" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dimen_10"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
@@ -90,9 +88,7 @@
                         android:fontFamily="sans-serif-medium"
                         android:lineSpacingExtra="8sp"
                         android:text="Hari"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="@dimen/lbl_new_note_title"
-                        android:textStyle="normal" />
+                        android:textColor="@color/colorAccent" />
 
                     <EditText
                         android:id="@+id/hari"
@@ -104,7 +100,8 @@
                         android:inputType="textCapSentences|text"
                         android:lines="1"
                         android:textColorHint="@color/hint_enter_note"
-                        android:textSize="@dimen/input_new_note" />
+                        android:editable="false"
+                        android:focusable="false" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -127,9 +124,7 @@
                         android:fontFamily="sans-serif-medium"
                         android:lineSpacingExtra="8sp"
                         android:text="Jam Mulai"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="@dimen/lbl_new_note_title"
-                        android:textStyle="normal" />
+                        android:textColor="@color/colorAccent" />
 
                     <EditText
                         android:id="@+id/mulai"
@@ -137,11 +132,12 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
                         android:gravity="top"
-                        android:hint="Jam Mulai"
+                        android:editable="false"
                         android:inputType="textCapSentences|text"
                         android:lines="1"
                         android:textColorHint="@color/hint_enter_note"
-                        android:textSize="@dimen/input_new_note" />
+                        android:focusable="false"
+                        android:hint="00:00" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -158,9 +154,7 @@
                         android:fontFamily="sans-serif-medium"
                         android:lineSpacingExtra="8sp"
                         android:text="Jam Selesai"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="@dimen/lbl_new_note_title"
-                        android:textStyle="normal" />
+                        android:textColor="@color/colorAccent" />
 
                     <EditText
                         android:id="@+id/selesai"
@@ -168,11 +162,12 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
                         android:gravity="top"
-                        android:hint="Jam Selesai"
+                        android:editable="false"
                         android:inputType="textCapSentences|text"
                         android:lines="1"
                         android:textColorHint="@color/hint_enter_note"
-                        android:textSize="@dimen/input_new_note" />
+                        android:focusable="false"
+                        android:hint="00:00" />
                 </LinearLayout>
             </LinearLayout>
 
